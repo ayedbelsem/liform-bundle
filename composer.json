@@ -1,6 +1,6 @@
 {
-  "name": "francis-roux-serret/liform-bundle",
-  "description": "Bundle for Liform: Transform Symfony Forms into Json Schema",
+  "name": "aramisauto/liform-bundle",
+  "description": "Liform library and its Symfony bundle: transform Symfony Forms into JSON Schema",
   "type": "symfony-bundle",
   "license": "MIT",
   "authors": [
@@ -11,20 +11,31 @@
   ],
   "autoload": {
     "psr-4": {
-      "Limenius\\LiformBundle\\": ""
+      "Limenius\\Liform\\": "src/Liform/",
+      "Limenius\\LiformBundle\\": "src/LiformBundle/"
     }
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/francis-roux-serret/liform.git"
+  "autoload-dev": {
+    "psr-4": {
+      "Limenius\\Liform\\Tests\\": "tests/Liform/"
     }
-  ],
+  },
   "require": {
-    "symfony/dependency-injection": "^5.4|^6.0|^7.0|^8.0",
-    "symfony/config": "^5.4|^6.0|^7.0|^8.0",
-    "symfony/http-kernel": "^5.4|^6.0|^7.0|^8.0",
-    "francis-roux-serret/liform": "^2.2"
+    "php": ">=8.2",
+    "symfony/config": "^6.4|^7.1|^8.0",
+    "symfony/dependency-injection": "^7.1|^8.0",
+    "symfony/form": "^6.4|^7.1|^8.0",
+    "symfony/http-kernel": "^6.4|^7.1|^8.0",
+    "symfony/serializer": "^6.4|^7.1|^8.0",
+    "symfony/translation": "^6.4|^7.1|^8.0",
+    "symfony/translation-contracts": "^2.1|^3.0",
+    "symfony/validator": "^6.4|^7.1|^8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.4|^12.0"
+  },
+  "scripts": {
+    "test": "phpunit"
   },
   "minimum-stability": "stable"
 }

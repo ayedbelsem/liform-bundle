@@ -1,3 +1,14 @@
+> **AramisAuto fork.** This repository bundles the [Liform](https://github.com/Limenius/Liform) library
+> (`src/Liform`, namespace `Limenius\Liform`) and its Symfony bundle (`src/LiformBundle`, namespace
+> `Limenius\LiformBundle`) in a single package: `aramisauto/liform-bundle`. It supports Symfony 8.
+>
+> ```json
+> "repositories": {"aramisauto/liform-bundle": {"type": "vcs", "url": "git@github.com:ayedbelsem/liform-bundle.git"}},
+> "require": {"aramisauto/liform-bundle": "^2.3"}
+> ```
+>
+> Run the tests with `composer install && vendor/bin/phpunit`.
+
 LiformBundle
 ============
 
@@ -19,7 +30,7 @@ Feel free to clone it, run it, experiment, and copy the pieces you need to your 
 Open a console, navigate to your project directory and execute the
 following command to download the latest stable version of this bundle:
 
-    $ composer require limenius/liform-bundle
+    $ composer require aramisauto/liform-bundle
 
 This command requires you to have Composer installed globally, as explained
 in the *installation chapter* of the Composer documentation.
